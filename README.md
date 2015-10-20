@@ -22,9 +22,11 @@ bower install
 gulp build`
 
 ![](https://oranwind.s3.amazonaws.com/2015/Oct/3-1445353449637.png)
+
 看到以上訊息代表已建置成功。
 
 **步驟四**：打開專案目錄中的 index.html 並在其後方加入參數(裝置 ID) **#testman**，接著會看到儀表板數值隨意跳動。
+
 ![alt](https://oranwind.s3.amazonaws.com/2015/Oct/4-1445353699700.png)
 
 完成。
