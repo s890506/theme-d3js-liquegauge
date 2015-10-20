@@ -1,60 +1,30 @@
-# .CITY Starter Kit
+本篇將教大家如何建置 WoT.City 儀錶板 (theme-d3js-liquegauge)。
 
-Help makers making Internet of Personal Things.
+**步驟一**：請先至該倉庫複製 clone URL，並在您的工作區目錄使用 git clone 指令。
 
-1. [Install](#install)
-2. [Discussion](#discussion)
-3. [How To Report Bugs](#how-to-report-bugs)
-4. [Core Style Guide](#core-style-guide)
-5. [Authors](#authors)
+`git clone https://github.com/wotcity/theme-d3js-liquegauge.git`
 
-## Install
+![alt](https://oranwind.s3.amazonaws.com/2015/Oct/1a-1445352970507.png)
 
-1. [Download CSK](https://github.com/wotcity/dotcity-starter-kit/releases) and uncompress the package.
-2. Run `$ cd dotcity-starter-kit` to change the directory.
-3. Run `$ npm install --global gulp` to install Gulp.
-4. Run `$ npm install --global bower` to install Bower.
-5. Run `$ npm install` to install the dependencies if you don't already have them.
-6. Run `$ bower install` to install the dependencies if your don't already have them.
-7. Run `$ gulp build` to build the application scripts.
-8. Open `index.html` with your faroviate browser. The web app page is empty now.
-9. Append the device name in the URL as an frontend routing parameter. For example `index.html#5547870f4dd3e08d63000007`
+**步驟二**：使用 npm 安裝 Gulp 和 Bower 等工具 (已裝過的人請跳過此步驟)，指令如下：
 
-### Prerequisites
+`npm install --global gulp.
+ npm install --global bower`
 
-1. [Node.js](https://nodejs.org). Note: Node should be with a version above 0.10.x.
-2. [Gulp](http://gulpjs.com). Note: Run `$ npm install --global gulp` to install the latest version.
-3. [Bower](http://bower.io). Note: Run `$ npm install --global bower` to install the latest versin.
-4. Note: `git` command line interface is needed for Bower.
+Q & A：[npm 報錯 Error: ENOENT](http://oranwind.org/node-js/)
 
-### Getting the device name
+**步驟三**：接著切換到 theme-d3js-liquegauge 的專案目錄下，並安裝相關套件及進行建置，指令如下：
 
-1. Please visit [WoT.City Platform](http://wotcity.com).
-2. Signup to create your account.
-3. Login to your account.
-4. Click *Device Manager* at the left side menu.
-5. Click *Launch New Device* button to create a new device instance.
-6. Copy your device name at *Device Name (Physical Object)* column.
+`npm install
+bower install
+gulp build`
 
-## Discussion
+![](https://oranwind.s3.amazonaws.com/2015/Oct/3-1445353449637.png)
+看到以上訊息代表已建置成功。
 
-There are various ways to get involved with .CITY Starter Kit. We're looking for help identifying bugs, writing documentation and contributing codes.
+**步驟四**：打開專案目錄中的 index.html 並在其後方加入參數(裝置 ID) **#testman**，接著會看到儀表板數值隨意跳動。
+![alt](https://oranwind.s3.amazonaws.com/2015/Oct/4-1445353699700.png)
 
-Most of the .CITY Starter Kit developers, users and contributors are at WeChat group or IRC channel. You can find us in the [#wotcity](http://webchat.freenode.net/?channels=wotcity) IRC channel on irc.freenode.net. You can get information of how to join WeChat group at [#wotcity](http://webchat.freenode.net/?channels=wotcity).
+完成。
 
-## How to Report Bugs
-
-Bugs are reported via [https://github.com/wotcity/dotcity-starter-kit](https://github.com/wotcity/dotcity-starter-kit).
-
-## Core Style Guide
-
-.CITY Starter Kit project follows [jQuery's Style Guides](http://contribute.jquery.org/style-guide/) except that:
-
-* `forin` must be used in .CITY Starter Kit project.
-* `quotmark` must be `single`. Strings must use singlequote.
-
-.CITY Starter Kit project uses JSHint to validate code styles. The JSHint options are stored in the `.jshintrc` file. Run `$ gulp jshint` to detect errors.
-
-## License
-
-Apache License
+**注意**：接著若修改專案內的 js 檔，請重新執行 gulp build 進行建置。
